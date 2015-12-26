@@ -66,6 +66,7 @@ public class MainActivity extends Activity {
         final OnClickListener lbtn24 = new OnClickListener() {
             @Override
             public void onClick(View v) {
+                memory.add(textViewIn.getText().toString().concat("=".concat(textViewOut.getText().toString())));
                 MainActivity.this.calculate();
                 textViewIn.setText(String.valueOf(textViewOut.getText()));
                 textViewIn.setSelection(textViewIn.getText().length());
